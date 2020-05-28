@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO</title>
+    <link rel="stylesheet" href="./style/canvas.css">
+</head>
+
+<body>
+    <canvas id="myCanvas">你的浏览器不支持canvas！</canvas>
+    <script src="./script/Game.js"></script>
+    <script src="./script/Background.js"></script>
+    <script>
+        var game = new Game({ "canvasid": "#myCanvas", "Rjsonurl": "R.json" });
+    </script>
+</body>
+
+</html>

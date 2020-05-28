@@ -1,0 +1,34 @@
+{
+    "images": [
+        {
+            "name": "grassA",
+            "url": "image/grass/A.png"
+        },
+        {
+            "name": "grassB",
+            "url": "image/grass/B.png"
+        },
+        {
+            "name": "grassC",
+            "url": "image/grass/C.png"
+        },
+        {
+            "name": "grassD",
+            "url": "image/grass/D.png"
+        },
+        {
+            "name": "swordsman",
+            "url": "image/swordsman.png"
+        },
+        {
+            "name": "gunner",
+            "url": "image/gunner.png"
+        }
+    ],
+    "audio": [
+        {
+            "name": "StartBGM",
+            "url": "media/audio/StartBGM.mp3"
+        }
+    ]
+}
