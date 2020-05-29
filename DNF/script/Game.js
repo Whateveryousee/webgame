@@ -18,11 +18,14 @@
         this.loadAllResource(function () {
             //我们封装的回调函数，这里表示全部资源读取完毕
             self.start();
+
+            //绑定监听
+            self.bindEvent();
         });
     }
     Game.prototype.init = function () {
-        this.canvas.width = 1024;
-        this.canvas.height = 768;
+        this.canvas.width = 800;
+        this.canvas.height = 600;
     }
 
     //读取资源
@@ -52,7 +55,8 @@
                         var txt = "正在加载资源" + alreadyDoneNumber + "/" + Robj.images.length + "Loading...";
                         //放置居中的位置，画布的黄金分割点
                         self.ctx.textAlign = "center";
-                        self.ctx.font = "20px 微软雅黑"
+                        self.ctx.font = "20px 微软雅黑";
+                        self.ctx.fillStyle = "#ff0";
                         self.ctx.fillText(txt, self.canvas.width / 2, self.canvas.height * 0.618);
                         //判断是否全部加载完毕
                         if (alreadyDoneNumber == Robj.images.length) {
@@ -70,6 +74,13 @@
     Game.prototype.start = function () {
         //实例化背景
         this.background = new Background();
+        //实例化地面
+        this.land = new Land();
+        //实例化所有NPC
+        this.Npc = new NPC();
+        //实例化主角
+        this.leadActor = new LeadActor();
+
         var self = this;
         //设置定时器
         this.timer = setInterval(function () {
@@ -82,10 +93,33 @@
             self.background.update();
             //渲染背景
             self.background.render();
+
+            //更新地面
+            self.land.update();
+            //渲染地面
+            self.land.render();
+
+            //更新NPC
+            self.Npc.update();
+            //渲染NPC
+            self.Npc.render();
+
+            //更新主角
+            self.leadActor.update();
+            //渲染主角
+            self.leadActor.render();
+
             //打印帧编号
             self.ctx.font = "16px consolas";
             self.ctx.textAlign = "left";
             self.ctx.fillText("FNO:" + self.fno, 10, 10);
         }, 20);
+    }
+
+    Game.prototype.bindEvent = function () {
+        var self = this;
+        this.canvas.onclick = function (){
+            self.leadActor.high_jump();
+        }
     }
 })();

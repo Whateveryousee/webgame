@@ -1,6 +1,11 @@
 {
     "images": [
         {
+            "name": "bg_mid_woods",
+            "url": "image/background_middle/0.png"
+        },
+
+        {
             "name": "grassA",
             "url": "image/grass/A.png"
         },
@@ -16,13 +21,135 @@
             "name": "grassD",
             "url": "image/grass/D.png"
         },
+        
         {
-            "name": "swordsman",
-            "url": "image/swordsman.png"
+            "name": "stoneA",
+            "url": "image/other/10.png"
+        },
+
+
+        {
+            "name": "swordsman_b",
+            "url": "image/lead_actor/176.png"
         },
         {
-            "name": "gunner",
+            "name": "swordsman_b_stay1",
+            "url": "image/lead_actor/177.png"
+        },
+        {
+            "name": "swordsman_b_stay2",
+            "url": "image/lead_actor/178.png"
+        },
+        {
+            "name": "swordsman_b_stay3",
+            "url": "image/lead_actor/179.png"
+        },
+        {
+            "name": "swordsman_b_walk1",
+            "url": "image/lead_actor/180.png"
+        },
+        {
+            "name": "swordsman_b_walk2",
+            "url": "image/lead_actor/181.png"
+        },
+        {
+            "name": "swordsman_b_walk3",
+            "url": "image/lead_actor/182.png"
+        },
+        {
+            "name": "swordsman_b_walk4",
+            "url": "image/lead_actor/183.png"
+        },
+        {
+            "name": "swordsman_b_walk5",
+            "url": "image/lead_actor/184.png"
+        },
+        {
+            "name": "swordsman_b_walk6",
+            "url": "image/lead_actor/185.png"
+        },
+        {
+            "name": "swordsman_b_walk7",
+            "url": "image/lead_actor/186.png"
+        },
+        {
+            "name": "swordsman_b_walk8",
+            "url": "image/lead_actor/187.png"
+        },
+        {
+            "name": "swordsman_b_run1",
+            "url": "image/lead_actor/105.png"
+        },
+        {
+            "name": "swordsman_b_run2",
+            "url": "image/lead_actor/106.png"
+        },
+        {
+            "name": "swordsman_b_run3",
+            "url": "image/lead_actor/107.png"
+        },
+        {
+            "name": "swordsman_b_run4",
+            "url": "image/lead_actor/108.png"
+        },
+        {
+            "name": "swordsman_b_run5",
+            "url": "image/lead_actor/109.png"
+        },
+        {
+            "name": "swordsman_b_run6",
+            "url": "image/lead_actor/110.png"
+        },
+        {
+            "name": "swordsman_b_run7",
+            "url": "image/lead_actor/111.png"
+        },
+        {
+            "name": "swordsman_b_run8",
+            "url": "image/lead_actor/112.png"
+        },
+        {
+            "name": "swordsman_b_fight",
+            "url": "image/lead_actor/125.png"
+        },
+        {
+            "name": "swordsman_b_jump2",
+            "url": "image/lead_actor/126.png"
+        },
+        {
+            "name": "swordsman_b_jump3",
+            "url": "image/lead_actor/127.png"
+        },
+        {
+            "name": "swordsman_b_jump4",
+            "url": "image/lead_actor/128.png"
+        },
+        {
+            "name": "swordsman_b_jump5",
+            "url": "image/lead_actor/129.png"
+        },
+        {
+            "name": "swordsman_b_jump6",
+            "url": "image/lead_actor/130.png"
+        },
+        {
+            "name": "swordsman_b_jump7",
+            "url": "image/lead_actor/131.png"
+        },
+        {
+            "name": "swordsman_b_jump8",
+            "url": "image/lead_actor/132.png"
+        },
+        
+
+        {
+            "name": "gunner_b",
             "url": "image/gunner.png"
+        },
+
+        {
+            "name": "sailiya",
+            "url": "image/npc/sly.png"
         }
     ],
     "audio": [
