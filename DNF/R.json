@@ -152,9 +152,13 @@
             "url": "image/npc/sly.png"
         }
     ],
-    "audio": [
+    "audios": [
         {
             "name": "StartBGM",
+            "url": "media/audio/StartBGM_qiyuan.mp3"
+        },
+        {
+            "name": "StartBGM2",
             "url": "media/audio/StartBGM.mp3"
         }
     ]

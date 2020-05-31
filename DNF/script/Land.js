@@ -27,15 +27,15 @@
     //渲染草地与其他杂项，（石头，花丛，树根...)
     Land.prototype.render = function () {
         //草地
-        game.ctx.drawImage(this.grassA, this.grassA.w * 0, game.canvas.height - 203);
-        game.ctx.drawImage(this.grassA, this.grassA.w * 1, game.canvas.height - 203);
-        game.ctx.drawImage(this.grassA, this.grassA.w * 2, game.canvas.height - 203);
-        game.ctx.drawImage(this.grassA, this.grassA.w * 3, game.canvas.height - 203);
+        game.ctx.drawImage(this.grassA, this.grassA.w * 0, game.canvas.height - this.grassA.h);
+        game.ctx.drawImage(this.grassA, this.grassA.w * 1, game.canvas.height - this.grassA.h);
+        game.ctx.drawImage(this.grassA, this.grassA.w * 2, game.canvas.height - this.grassA.h);
+        game.ctx.drawImage(this.grassA, this.grassA.w * 3, game.canvas.height - this.grassA.h);
 
-        game.ctx.drawImage(this.grassA, this.grassA.w * 0, this.y+30);
-        game.ctx.drawImage(this.grassA, this.grassA.w * 1, this.y+30);
-        game.ctx.drawImage(this.grassA, this.grassA.w * 2, this.y+30);
-        game.ctx.drawImage(this.grassA, this.grassA.w * 3, this.y+30);
+        game.ctx.drawImage(this.grassA, this.grassA.w * 0, this.y+60);
+        game.ctx.drawImage(this.grassA, this.grassA.w * 1, this.y+60);
+        game.ctx.drawImage(this.grassA, this.grassA.w * 2, this.y+60);
+        game.ctx.drawImage(this.grassA, this.grassA.w * 3, this.y+60);
 
 
         //石头

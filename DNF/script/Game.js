@@ -20,7 +20,7 @@
             self.start();
 
             //绑定监听
-            self.bindEvent();
+            /* self.bindEvent(); */
         });
     }
     Game.prototype.init = function () {
@@ -31,7 +31,8 @@
     //读取资源
     Game.prototype.loadAllResource = function (callback) {
         //准备一个R对象
-        this.R = {}
+        this.R = {};
+        this.Audio = {};
         var self = this; //备份
         //计数器
         var alreadyDoneNumber = 0;
@@ -52,17 +53,24 @@
                         //清屏
                         self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
                         //提示文字
-                        var txt = "正在加载资源" + alreadyDoneNumber + "/" + Robj.images.length + "Loading...";
+                        var txt = "正在加载资源" + alreadyDoneNumber + "/" + Robj.images.length + "Loading...如果长时间未加载请刷新";
                         //放置居中的位置，画布的黄金分割点
                         self.ctx.textAlign = "center";
                         self.ctx.font = "20px 微软雅黑";
-                        self.ctx.fillStyle = "#ff0";
+                        self.ctx.fillStyle = "#000";
                         self.ctx.fillText(txt, self.canvas.width / 2, self.canvas.height * 0.618);
                         //判断是否全部加载完毕
                         if (alreadyDoneNumber == Robj.images.length) {
                             callback.call(self);
                         }
                     }
+                }
+                // 加载开始界面背景音乐
+                for(var i = 0;i < Robj.audios.length; i++){
+                    //创建一共同名的key
+                    self.Audio[Robj.audios[i].name] = document.createElement("audio");
+                    //请求
+                    self.Audio[Robj.audios[i].name].src = Robj.audios[i].url;
                 }
             }
         }
@@ -72,6 +80,7 @@
 
     //开始游戏
     Game.prototype.start = function () {
+        /* 
         //实例化背景
         this.background = new Background();
         //实例化地面
@@ -80,6 +89,14 @@
         this.Npc = new NPC();
         //实例化主角
         this.leadActor = new LeadActor();
+         */
+
+        /* 实例化自己的场景管理器即可
+        此时game不需要负责渲染背景、主角地面、NPC等。仅需负责渲染、更新场景管理器即可 */
+        this.sm = new SceneManager();
+
+        //播放音乐
+        this.Audio["StartBGM"].play();
 
         var self = this;
         //设置定时器
@@ -88,7 +105,8 @@
             self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
             //帧编号
             self.fno++;
-            
+
+            /* 
             //更新背景
             self.background.update();
             //渲染背景
@@ -108,18 +126,30 @@
             self.leadActor.update();
             //渲染主角
             self.leadActor.render();
+             */
+
+            // 更新场景管理器
+            self.sm.update();
+            // 渲染场景管理器
+            self.sm.render();
 
             //打印帧编号
             self.ctx.font = "16px consolas";
             self.ctx.textAlign = "left";
-            self.ctx.fillText("FNO:" + self.fno, 10, 10);
+            self.ctx.fillStyle = "#ff0";
+            self.ctx.fillText("FNO:" + self.fno, 10, 20);
+            //打印场景号
+            self.ctx.fillText("场景号:" + self.sm.sceneNumber, 10, 40);
         }, 20);
     }
-
+    
+    /* 
+    //监听
     Game.prototype.bindEvent = function () {
         var self = this;
-        this.canvas.onclick = function (){
+        this.canvas.onclick = function () {
             self.leadActor.high_jump();
         }
     }
+     */
 })();
