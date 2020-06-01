@@ -95,8 +95,7 @@
         此时game不需要负责渲染背景、主角地面、NPC等。仅需负责渲染、更新场景管理器即可 */
         this.sm = new SceneManager();
 
-        //播放音乐
-        this.Audio["StartBGM"].play();
+        
 
         var self = this;
         //设置定时器

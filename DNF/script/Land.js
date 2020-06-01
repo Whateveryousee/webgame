@@ -2,6 +2,13 @@
     //地面类 
     var Land = window.Land = function () {
         //自己的背景
+        //树
+        this.treeA = game.R.treeA;
+        this.treeB = game.R.treeB;
+        this.treeC = game.R.treeC;
+        this.treeD = game.R.treeD;
+        this.treeE = game.R.treeE;
+
         //草地
         this.grassA = game.R.grassA;
         this.grassB = game.R.grassB;
@@ -37,6 +44,21 @@
         game.ctx.drawImage(this.grassA, this.grassA.w * 2, this.y+60);
         game.ctx.drawImage(this.grassA, this.grassA.w * 3, this.y+60);
 
+        //树
+        game.ctx.drawImage(this.treeB, -40, 0);
+        game.ctx.drawImage(this.treeD, 380, 100);
+        game.ctx.drawImage(this.treeA, 150, -50);
+        game.ctx.drawImage(this.treeB, 250, -20);
+        game.ctx.drawImage(this.treeE, -10, 210);
+        game.ctx.drawImage(this.treeE, -60, 300);
+        game.ctx.drawImage(this.treeB, 660, -50);
+        game.ctx.drawImage(this.treeB, 540, -30);
+        
+        game.ctx.drawImage(this.treeE, 300, 510);
+        game.ctx.drawImage(this.treeE, 200, 530);
+
+        game.ctx.drawImage(this.treeD, -50, 530);
+        game.ctx.drawImage(this.treeD, 50, 550);
 
         //石头
         game.ctx.drawImage(this.stoneA, 500, 330);

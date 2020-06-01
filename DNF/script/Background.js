@@ -1,7 +1,7 @@
 (function () {
-    //背景类
+    //背景类 仅为游戏内容背景
     var Background = window.Background = function () {
-        //自己的背景
+        
         //中景
         this.bg_mid = game.R.bg_mid_woods;
         this.imageB = game.R.grassB;
@@ -15,6 +15,7 @@
     }
     //渲染
     Background.prototype.render = function () {
+
         game.ctx.drawImage(this.bg_mid, 0, 0, 640, 300,0,0,640,300);
         game.ctx.drawImage(this.bg_mid, 0, 0, 640, 300,640,0,640,300);
         /* game.ctx.drawImage(this.imageC, 672, game.canvas.height - 233);

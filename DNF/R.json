@@ -1,10 +1,56 @@
 {
     "images": [
+
+        {
+            "name": "startBg",
+            "url": "image/SceneManager/StartSM/StartBg.png"
+        },
+        {
+            "name": "mainText",
+            "url": "image/SceneManager/StartSM/mainText.png"
+        },
+        {
+            "name": "activeText",
+            "url": "image/SceneManager/StartSM/activeText.png"
+        },
+        {
+            "name": "gear",
+            "url": "image/SceneManager/StartSM/gear.png"
+        },
+        {
+            "name": "startGameBtn",
+            "url": "image/button/start.png"
+        },
+        {
+            "name": "startGameBtnomo",
+            "url": "image/button/start_omo.png"
+        },
+
         {
             "name": "bg_mid_woods",
             "url": "image/background_middle/0.png"
         },
 
+        {
+            "name": "treeA",
+            "url": "image/tree/0.png"
+        },
+        {
+            "name": "treeB",
+            "url": "image/tree/14.png"
+        },
+        {
+            "name": "treeC",
+            "url": "image/tree/15.png"
+        },
+        {
+            "name": "treeD",
+            "url": "image/tree/17.png"
+        },
+        {
+            "name": "treeE",
+            "url": "image/tree/26.png"
+        },
         {
             "name": "grassA",
             "url": "image/grass/A.png"
@@ -160,6 +206,10 @@
         {
             "name": "StartBGM2",
             "url": "media/audio/StartBGM.mp3"
+        },
+        {
+            "name": "Forest01Old",
+            "url": "media/audio/Forest01_old.mp3"
         }
     ]
 }
