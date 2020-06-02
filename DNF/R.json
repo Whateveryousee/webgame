@@ -27,6 +27,14 @@
         },
 
         {
+            "name": "bg_far_0",
+            "url": "image/background_far/0.png"
+        },
+        {
+            "name": "bg_far_1",
+            "url": "image/background_far/1.png"
+        },
+        {
             "name": "bg_mid_woods",
             "url": "image/background_middle/0.png"
         },
@@ -71,6 +79,14 @@
         {
             "name": "stoneA",
             "url": "image/other/10.png"
+        },
+        {
+            "name": "flowerA",
+            "url": "image/other/2.png"
+        },
+        {
+            "name": "flowerB",
+            "url": "image/other/3.png"
         },
 
 

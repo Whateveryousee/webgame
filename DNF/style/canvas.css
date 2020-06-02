@@ -5,4 +5,4 @@ body{margin: 0;padding: 0;}
 body{cursor: url(../image/cursor/default.png), auto; }
 canvas,canvas:link,canvas:visited,canvas:visited{cursor: url(../image/cursor/default.png), auto;}
 canvas:active{cursor: url(../image/cursor/default_omd.png), auto;}
-canvas{display: block;margin: 100px auto;border:1px solid gray;}
+canvas{display: block;margin: 50px auto;border:1px solid gray;}

@@ -20,7 +20,7 @@
             self.start();
 
             //绑定监听
-            /* self.bindEvent(); */
+            self.bindEvent();
         });
     }
     Game.prototype.init = function () {
@@ -66,7 +66,7 @@
                     }
                 }
                 // 加载开始界面背景音乐
-                for(var i = 0;i < Robj.audios.length; i++){
+                for (var i = 0; i < Robj.audios.length; i++) {
                     //创建一共同名的key
                     self.Audio[Robj.audios[i].name] = document.createElement("audio");
                     //请求
@@ -80,23 +80,9 @@
 
     //开始游戏
     Game.prototype.start = function () {
-        /* 
-        //实例化背景
-        this.background = new Background();
-        //实例化地面
-        this.land = new Land();
-        //实例化所有NPC
-        this.Npc = new NPC();
-        //实例化主角
-        this.leadActor = new LeadActor();
-         */
-
         /* 实例化自己的场景管理器即可
         此时game不需要负责渲染背景、主角地面、NPC等。仅需负责渲染、更新场景管理器即可 */
         this.sm = new SceneManager();
-
-        
-
         var self = this;
         //设置定时器
         this.timer = setInterval(function () {
@@ -104,28 +90,6 @@
             self.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
             //帧编号
             self.fno++;
-
-            /* 
-            //更新背景
-            self.background.update();
-            //渲染背景
-            self.background.render();
-
-            //更新地面
-            self.land.update();
-            //渲染地面
-            self.land.render();
-
-            //更新NPC
-            self.Npc.update();
-            //渲染NPC
-            self.Npc.render();
-
-            //更新主角
-            self.leadActor.update();
-            //渲染主角
-            self.leadActor.render();
-             */
 
             // 更新场景管理器
             self.sm.update();
@@ -141,14 +105,32 @@
             self.ctx.fillText("场景号:" + self.sm.sceneNumber, 10, 40);
         }, 20);
     }
-    
-    /* 
-    //监听
+
+
+    //绑定监听
     Game.prototype.bindEvent = function () {
         var self = this;
-        this.canvas.onclick = function () {
-            self.leadActor.high_jump();
+        document.onkeydown = function (event) {
+            var event = window.e || event;
+            if (event.keyCode == 37) {
+                self.player1.changeDirection("L");
+                self.player1.isMoving = true;
+            } else if (event.keyCode == 38) {
+                self.player1.changeDirection("U");
+                self.player1.isMoving = true;
+            } else if (event.keyCode == 39) {
+                self.player1.changeDirection("R");
+                self.player1.isMoving = true;
+            } else if (event.keyCode == 40) {
+                self.player1.changeDirection("D");
+                self.player1.isMoving = true;
+            }
+
+
+        }
+        document.onkeyup = function () {
+            self.player1.isMoving = false;
         }
     }
-     */
+
 })();

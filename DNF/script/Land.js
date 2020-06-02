@@ -1,5 +1,5 @@
 (function () {
-    //地面类 
+    //地面类 (不知道障碍物能不能放在这里)
     var Land = window.Land = function () {
         //自己的背景
         //树
@@ -25,6 +25,10 @@
 
         this.stoneA.w = 141;
         this.stoneA.h = 89;
+
+        //花
+        this.flowerA = game.R.flowerA;
+        this.flowerB = game.R.flowerB;
 
     }
     //更新
@@ -56,15 +60,28 @@
         
         game.ctx.drawImage(this.treeE, 300, 510);
         game.ctx.drawImage(this.treeE, 200, 530);
+        game.ctx.drawImage(this.treeE, 750, 500);
 
         game.ctx.drawImage(this.treeD, -50, 530);
         game.ctx.drawImage(this.treeD, 50, 550);
 
         //石头
         game.ctx.drawImage(this.stoneA, 500, 330);
-        game.ctx.drawImage(this.stoneA, 580,370);
-        game.ctx.drawImage(this.stoneA, 520, 440);
-        game.ctx.drawImage(this.stoneA, 570,490);
+        game.ctx.drawImage(this.stoneA, 580,380);
+        game.ctx.drawImage(this.stoneA, 500, 450);
+        game.ctx.drawImage(this.stoneA, 570,520);
+        game.ctx.drawImage(this.stoneA, 440,570);
+
+        //花、花丛
+        game.ctx.drawImage(this.flowerA, 150, 270);
+        game.ctx.drawImage(this.flowerA, 300, 280);
+        game.ctx.drawImage(this.flowerA, 500, 280);
+        game.ctx.drawImage(this.flowerA, 640, 290);
+        game.ctx.drawImage(this.flowerA, 780, 280);
+
+        game.ctx.drawImage(this.flowerB, 500, 400);
+        game.ctx.drawImage(this.flowerB, 700, 500);
+
     }
 
 })()

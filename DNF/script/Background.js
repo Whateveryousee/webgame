@@ -1,6 +1,9 @@
 (function () {
     //背景类 仅为游戏内容背景
     var Background = window.Background = function () {
+        //远景 远景可以保持不动
+        this.bg_far_0 = game.R.bg_far_0;
+        
         
         //中景
         this.bg_mid = game.R.bg_mid_woods;
@@ -16,11 +19,11 @@
     //渲染
     Background.prototype.render = function () {
 
+        game.ctx.drawImage(this.bg_far_0, 0, 0);
+        game.ctx.drawImage(this.bg_far_0, 640,0);
+
         game.ctx.drawImage(this.bg_mid, 0, 0, 640, 300,0,0,640,300);
         game.ctx.drawImage(this.bg_mid, 0, 0, 640, 300,640,0,640,300);
-        /* game.ctx.drawImage(this.imageC, 672, game.canvas.height - 233);
-        game.ctx.drawImage(this.imageD, 448, game.canvas.height - 235);
-        game.ctx.drawImage(this.imageA, 896, game.canvas.height - 203); */
     }
 
 })()

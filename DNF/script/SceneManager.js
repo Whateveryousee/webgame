@@ -1,10 +1,10 @@
 (function () {
     var SceneManager = window.SceneManager = function () {
         // 1表示开始界面，2表示教程，3表示游戏内容，4表示GameOver
-        this.sceneNumber = 1;
+        this.sceneNumber = 2;
         //场景管理器负责实例化东西
 
-        // 开始游戏场景
+        // 实例化开始游戏场景
         game.startBg = new StartBg();
 
         //考虑加入淡入淡出特效
@@ -15,6 +15,9 @@
 
         this.mainTextY = -500;
         this.activeTextY = 500;
+
+        //实例化玩家角色
+        game.player1 = new Player();
 
         //添加监听
         this.bindEvent();
@@ -54,14 +57,17 @@
                 game.ctx.drawImage(game.R["startGameBtn"], game.canvas.width / 2 - 64, 350);
 
                 //播放初始音乐
-                game.Audio["StartBGM"].play();
+                // game.Audio["StartBGM"].play();
                 break;
             case 2:
                 game.background.render();
                 game.land.render();
 
+                game.player1.update();
+                game.player1.render();
+
                 //播放音乐
-                game.Audio["Forest01Old"].play();
+                // game.Audio["Forest01Old"].play();
                 break;
         }
     }
